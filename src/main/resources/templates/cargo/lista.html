@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html layout:decorate="~{layout}">
+<html layout:decorate="~{layout2}">
 <head><meta charset="UTF-8"/></head>
 <body>
-	    <section class="layout-content" layout:fragment="corpo">
-	
+	    <section class="layout-content" layout:fragment="corpo2">
+
 	        <nav class="navbar navbar-expand-md bg-light">
 	            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 	                <ul class="navbar-nav mr-auto">
@@ -18,11 +18,11 @@
 	                <span>Novo Cargo</span>
 	            </a>
 	        </nav>
-	
+
 	        <div class="container" id="listagem">
-	        
+
 	        	<div th:replace="fragments/alert"></div>
-	        	
+
 	            <div class="table-responsive">
 	                <table class="table table-striped table-hover table-sm">
 	                    <thead>
@@ -42,19 +42,19 @@
 		                            <a class="btn btn-info btn-sm" th:href="@{/cargos/editar/{id} (id=${c.id}) }" role="button">
 		                                <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>
 		                            </a>
-		                            <button th:id="${#strings.concat('btn_cargos/excluir/', c.id)  }" type="button" 
+		                            <button th:id="${#strings.concat('btn_cargos/excluir/', c.id)  }" type="button"
 		                                    class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">
 		                                <span class="oi oi-circle-x" title="Exclusão desabilitada" aria-hidden="true"></span>
 		                            </button>
 		                        </td>
-		                    </tr>	
+		                    </tr>
 	                    </tbody>
 	                </table>
 	            </div>
 	        </div>
-	        
+
 	        <div th:replace="fragments/modal :: modal"></div>
-	        	        
+
 	    </section>
 </body>
-</html>		
+</html>

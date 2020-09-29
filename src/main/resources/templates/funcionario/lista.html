@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html layout:decorate="~{layout}">
+<html layout:decorate="~{layout2}">
 <head>
 <meta charset="UTF-8" />
 </head>
 <body>
 
-	<section class="layout-content" layout:fragment="corpo">
+	<section class="layout-content" layout:fragment="corpo2">
 		<nav class="navbar navbar-expand-md bg-light">
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 				<ul class="navbar-nav mr-auto">
@@ -137,7 +137,7 @@
 									th:id="${#strings.concat('btn_funcionarios/excluir/', f.id) }"
 									type="button" class="btn btn-danger btn-sm" data-toggle="modal"
 									data-target="#myModal">
-									<span class="oi oi-circle-x" title="Excluir" aria-hidden="true"></span>
+									<span class="oi oi-circle-x" title="Excluir" aria-hidden="false"></span>
 								</button></td>
 						</tr>
 					</tbody>
